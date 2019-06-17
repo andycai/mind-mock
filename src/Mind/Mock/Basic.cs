@@ -5,14 +5,18 @@ namespace Mind.Mock
 {
     public partial class Rand
     {
-		// 返回一个随机的布尔值
+		/// <summary>
+		/// 返回一个随机的布尔值
+		/// </summary>
 		public static bool Bool()
 		{
 			Random rd = new Random(GetRandomSeed());
 			return rd.Next(0, 10) > 5;
 		}
 
-		// 返回一个随机的自然数（大于等于0的整数）
+		/// <summary>
+		/// 返回一个随机的自然数（大于等于0的整数）
+		/// </summary>
 		public static int Natural(int min = 0, int max = 0)
 		{
 			Random rd = new Random(GetRandomSeed());
@@ -22,7 +26,9 @@ namespace Mind.Mock
 			return rd.Next(min, max);
 		}
 
-		// 返回一个随机的整数
+		/// <summary>
+		/// 返回一个随机的整数
+		/// </summary>
 		public static int Int(int min = 0, int max = 0)
 		{
 			if (max == 0)
@@ -34,7 +40,9 @@ namespace Mind.Mock
 			return rd.Next(min, max);
 		}
 
-		// 返回一个随机的浮点数
+		/// <summary>
+		/// 返回一个随机的浮点数
+		/// </summary>
 		public static float Float(int min = 0, int max = 0, int dmin = 0, int dmax = 0)
 		{
 			string result = "";
@@ -52,7 +60,9 @@ namespace Mind.Mock
 			'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
 			'!','@', '#', '$', '%', '^', '&', '*', '(', ')', '[', ']'
 		};
-		// 返回一个随机字符
+		/// <summary>
+		/// 返回一个随机字符
+		/// </summary>
 		public static char Char(string type = "alpha")
 		{
 			Random rd = new Random(GetRandomSeed());
@@ -109,7 +119,9 @@ namespace Mind.Mock
 			return str.ToString();
 		}
 
-		// 返回一个整型数组
+		/// <summary>
+		/// 返回一个整型数组
+		/// </summary>
 		public static int[] Range(int start, int stop = 0, int step = 1)
 		{
 			if (stop == 0)

@@ -2,7 +2,9 @@
 {
     public partial class Rand 
     {
-		// 随机生成N段英文文本
+		/// <summary>
+		/// 随机生成N段英文文本
+		/// </summary>
 		public static string Paragraph(int min = 3, int max = 8)
 		{
 			var len = GetRandom(min, max);
@@ -15,7 +17,9 @@
 			return result.TrimEnd(); 
 		}
 
-		// 随机生成N段中文文本
+		/// <summary>
+		/// 随机生成N段中文文本
+		/// </summary>
 		public static string CParagraph(int min = 3, int max = 8)
 		{
 			var len = GetRandom(min, max);
@@ -28,7 +32,9 @@
 			return result.TrimEnd(); 
 		}
 
-		// 随机生成N句英文
+		/// <summary>
+		/// 随机生成N句英文
+		/// </summary>
 		public static string Sentence(int min = 12, int max = 18)
 		{
 			var len = GetRandom(min, max);
@@ -41,7 +47,9 @@
 			return result.TrimEnd() + "."; 
 		}
 
-		// 随机生成N句中文
+		/// <summary>
+		/// 随机生成N句中文
+		/// </summary>
 		public static string CSentence(int min = 12, int max = 18)
 		{
 			var len = GetRandom(min, max);
@@ -54,7 +62,9 @@
 			return result.TrimEnd() + "。"; 
 		}
 
-		// 随机生成一N个英文单词
+		/// <summary>
+		/// 随机生成N个英文单词
+		/// </summary>
 		public static string Word(int min = 3, int max = 10)
 		{
 			var len = GetRandom(min, max);
@@ -67,7 +77,9 @@
 			return result;
 		}
 
-		// 随机生成N个中文词组
+		/// <summary>
+		/// 随机生成N个中文词组
+		/// </summary>
 		public static string CWord(int min = 1, int max = 5)
 		{
 			// 最常用的 500 个汉字 http://baike.baidu.com/view/568436.htm
@@ -82,7 +94,9 @@
 			return result;
 		}
 
-		// 随机生成N个英文标题
+		/// <summary>
+		/// 随机生成N个英文标题
+		/// </summary>
 		public static string Title(int min = 3, int max = 8)
 		{
 			var len = GetRandom(min, max);
@@ -95,7 +109,9 @@
 			return result.TrimEnd();
 		}
 
-		// 随机生成N个中文标题
+		/// <summary>
+		/// 随机生成N个中文标题
+		/// </summary>
 		public static string CTitle(int min = 3, int max = 8)
 		{
 			var len = GetRandom(min, max);

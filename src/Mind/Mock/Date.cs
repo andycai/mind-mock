@@ -4,6 +4,9 @@ namespace Mind.Mock
 {
     public partial class Rand 
     {
+		/// <summary>
+		/// 格式化日期、时间
+		/// </summary>
 		private static string format(int type = 0, string fmt = "yyyy-MM-dd")
 		{
 			Random rd = new Random(GetRandomSeed());
@@ -31,25 +34,33 @@ namespace Mind.Mock
 			return dstr;
 		}
 
-		// 随机生成一个日期字符串
+		/// <summary>
+		/// 随机生成一个日期字符串
+		/// </summary>
 		public static string Date(string fmt = "yyyy-MM-dd")
 		{
 			return format(0, fmt);
 		}
 
-		// 随机生成一个时间字符串
+		/// <summary>
+		/// 随机生成一个时间字符串
+		/// </summary>
 		public static string Time(string fmt = "yyyy-MM-dd")
 		{
 			return format(1, fmt); 
 		}
 
-		// 随机生成一个具体日期和时间字符串
+		/// <summary>
+		/// 随机生成一个具体日期和时间字符串
+		/// </summary>
 		public static string Datetime(string fmt = "yyyy-MM-dd")
 		{
 			return format(2, fmt); 
 		}
 
-		// 返回当前的日期字符串
+		/// <summary>
+		/// 返回当前的日期字符串
+		/// </summary>
 		public static string Now(string fmt = "yyyy-MM-dd HH:mm:ss")
 		{
 			return DateTime.Now.ToString(fmt); 

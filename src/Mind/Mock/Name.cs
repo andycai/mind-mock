@@ -49,49 +49,57 @@ namespace Mind.Mock
 			"洋 勇 艳 杰 娟 涛 明 超 秀兰 霞 " +
 			"平 刚 桂英";
 
-		// 随机生成一个西方人名的名
+		/// <summary>
+		/// 随机生成一个西方人名的名
+		/// </summary>
 		public static string FirstName()
 		{
 			List<string> list = new List<string>(firstNames);
 			return Pick<string>(list);
 		}
 
-		// 随机生成一个西方人名的姓
+		/// <summary>
+		/// 随机生成一个西方人名的姓
+		/// </summary>
 		public static string LastName()
 		{
 			List<string> list = new List<string>(lastNames);
 			return Pick<string>(list);
 		}
 
-		// 随机生成一个西方人名全名
+		/// <summary>
+		/// 随机生成一个西方人名全名
+		/// </summary>
 		public static string FullName(bool m = true)
 		{
 			string middle = m ? FirstName() + " " : "";
 			return FirstName() + " " + middle + LastName();
 		}
 
-		/*
-	    随机生成一个常见的中文姓
-	    [世界常用姓氏排行](http://baike.baidu.com/view/1719115.htm)
-	    [玄派网 - 网络小说创作辅助平台](http://xuanpai.sinaapp.com/)
-		*/
+		/// <summary>
+	    /// 随机生成一个常见的中文姓
+	    /// [世界常用姓氏排行](http://baike.baidu.com/view/1719115.htm)
+	    /// [玄派网 - 网络小说创作辅助平台](http://xuanpai.sinaapp.com/)
+		/// </summary>
 		public static string CFirstName()
 		{
 			List<string> list = new List<string>(cfirstNames.Split(' '));
 			return Pick<string>(list);
 		}
 
-		/*
-	    随机生成一个常见的中文名
-	    [中国最常见名字前50名_三九算命网](http://www.name999.net/xingming/xingshi/20131004/48.html)
-		*/
+		/// <summary>
+	    /// 随机生成一个常见的中文名
+	    /// [中国最常见名字前50名_三九算命网](http://www.name999.net/xingming/xingshi/20131004/48.html)
+		/// </summary>
 		public static string CLastName()
 		{
 			List<string> list = new List<string>(clastNames.Split(' '));
 			return Pick<string>(list);
 		}
 
-		// 随机生成一个常见的中文姓名
+		/// <summary>
+		/// 随机生成一个常见的中文姓名
+		/// </summary>
 		public static string CFullName()
 		{
 			return CFirstName() + CLastName();

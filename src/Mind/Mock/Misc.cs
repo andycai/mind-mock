@@ -29,7 +29,9 @@ namespace Mind.Mock
 	    
 	    https://github.com/victorquinn/chancejs/blob/develop/chance.js#L1349
 		*/
-		// 随机生成一个 GUID
+		/// <summary>
+		/// 随机生成一个 GUID
+		/// </summary>
 		public static string Guid()
 		{
 			var pool = "abcdefABCDEF1234567890";
@@ -41,17 +43,20 @@ namespace Mind.Mock
 			return guid;
 		}
 
+		/// <summary>
+		/// 随机生成一个 GUID
+		/// </summary>
 		public static string UUID()
 		{
 			return Guid();
 		}
 
-		/*
-	    随机生成一个 18 位身份证。
-	    [身份证](http://baike.baidu.com/view/1697.htm#4)
-	        地址码 6 + 出生日期码 8 + 顺序码 3 + 校验码 1
-	    [《中华人民共和国行政区划代码》国家标准(GB/T2260)](http://zhidao.baidu.com/question/1954561.html)
-		*/
+		/// <summary>
+	    /// 随机生成一个 18 位身份证。
+	    /// [身份证](http://baike.baidu.com/view/1697.htm#4)
+	    ///    地址码 6 + 出生日期码 8 + 顺序码 3 + 校验码 1
+	    /// [《中华人民共和国行政区划代码》国家标准(GB/T2260)](http://zhidao.baidu.com/question/1954561.html)
+		/// </summary>
 		public static string Id()
 		{
 			var id = "";
@@ -83,7 +88,9 @@ namespace Mind.Mock
 
 		private static Func<int, int> _incr;
 
-		// 生成一个全局的自增整数
+		/// <summary>
+		/// 生成一个全局的自增整数
+		/// </summary>
 		public static int Incr(int step = 1)
 		{
 			if (_incr == null)

@@ -4,7 +4,9 @@ namespace Mind.Mock
 {
     public partial class Rand 
     {
-		// 随机生成一个URL
+		/// <summary>
+		/// 随机生成一个URL
+		/// </summary>
 		public static string URL(string protocol = "", string host = "")
 		{
 			protocol = protocol == "" ? Protocol() : protocol;
@@ -13,7 +15,9 @@ namespace Mind.Mock
 			return protocol + "://" + host; 
 		}
 
-		// 随机生成一个协议
+		/// <summary>
+		/// 随机生成一个协议
+		/// </summary>
 		public static string Protocol()
 		{
 			var str = "http ftp gopher mailto mid cid news nntp prospero telnet rlogin tn3270 wais";
@@ -21,14 +25,18 @@ namespace Mind.Mock
 			return Pick(list); 
 		}
 
-		// 随机生成一个域名
+		/// <summary>
+		/// 随机生成一个域名
+		/// </summary>
 		public static string Domain(string tld = "")
 		{
 			tld = tld == "" ? TLD() : tld;
 			return Word() + "." + tld;
 		}
 
-		// 随机生成一个顶级域名
+		/// <summary>
+		/// 随机生成一个顶级域名
+		/// </summary>
 		public static string TLD()
 		{
 			var str =
@@ -48,14 +56,18 @@ namespace Mind.Mock
 			return Pick(list);
 		}
 
-		// 随机生成一个email地址
+		/// <summary>
+		/// 随机生成一个email地址
+		/// </summary>
 		public static string Email(string host = "")
 		{
 			host = host == "" ? Domain() : host;
 			return Char("lower") + Word() + "@" + host; 
 		}
 
-		// 随机生成一个IP
+		/// <summary>
+		/// 随机生成一个IP
+		/// </summary>
 		public static string IP()
 		{
 			return Int(1, 255) + "." + Int(1, 255) + "." + Int(1, 255) + "." + Int(1, 255);
